@@ -1,4 +1,4 @@
-# climatedataexplorer
+# Climate Data Explorer
 
 
 # Introduction
