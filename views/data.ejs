@@ -1,0 +1,61 @@
+<%- include('partials/header') -%>
+<main>
+    <section class="intro">
+        <h2>Data Sources</h2>
+        <p>
+            Search through the database for environmental, social, and economic data from official governmentsources and non governmental sources that measure the human causes of climate change, the impacts of climate change on human and natural systems, and the efforts of humans to mitigate its negative consequences and build resiliency.
+        </p>
+    </section>
+    <section class="dataTable">
+        <h3>Search the collection</h3>
+
+        <section class="tableNav">
+            <button class="filter">
+                <i class="fa-regular fa-filter"></i> Filter
+            </button>
+            <button class="">
+                <i class="fa-solid fa-arrow-down"></i> Sort
+            </button>
+            <a href="/add-data">Contribute Data</a>
+        </section>
+
+        <ul class="table">
+            <li class="dataCard">
+                <!--title | topics | vis types | link-->
+                <section class="dataRow1">
+                    <h5>Title goes here</h5>
+                    <div class="dataTopic">
+                        <span>Topic 1</span>
+                        <span>Topic 2</span>
+                    </div>
+                    <div class="visType">
+                        <span>Vis Type 1</span>
+                        <span>Vis Type 2</span>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </section>
+                <!-- the following details will show when users click to expand-->
+                <div class="expand"> 
+                    <!--scale | geographies | orgs | yr est | GST? | active? -->
+                    <section class="dataRow2">
+                        <span>Scale</span>
+                        <span><i class="fa-solid fa-angle-right"></i> Geographies</span>
+                        <a href="#">Organization</a>
+                        <span>Yr Est</span>
+                        <span>GST?</span>
+                        <i class="fa-solid fa-circle"></i></section><!--active?-->
+                    </section>
+                    <!--description -->
+                    <section class="dataRow3">
+                        <p>Description</p>
+                    </section>
+                </div>
+            </li>
+        </ul>
+        <section class="pagination">
+            <span>Paginatio goes here</span>
+        </section>
+    </section>
+</main>
+
+<%- include('partials/footer') -%>
