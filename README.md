@@ -2,12 +2,36 @@
 ![Climate Data Explorer cover image](https://github.com/wo1vin/climatedataexplorer/blob/main/public/assets/cover.png?raw=true)
 
 # Introduction
-This project is a work in progress.
-This platfom identifies and brings together important data from sources that go beyond national statistics. The Climate Data Explorer enables decision makers, climate experts, businesses, and citizens to leverage data to address all aspects of the climate crisis.
+The Paris Climate Agreement included guidelines to “take stock” of the world’s progress towards the climate goals set forth by the Agreement (Page 20, Article 14). The agreement states that the first global stocktake (GST) will be in 2023. The GST gave way to the COP27 Global Stocktake Climate Datathon, which launched on September 21st, and closes on October 15th.
+
+Organized by the Open Earth Foundation, Data-Driven Enviro Lab 2.0, and Climate Action Data 2.0, the datathon fosters innovation, collaboration, and the creation of data visualization tools to aid in the analysis of climate data for the 2023 GST. With the opportunity provided by the event, a small, global team of passionate climate activists is working to tackle the prompt to “Map the Climate Data Platform Space.” This work in progress is the result of that collaborative effort. 
+
+---
+
+# Objective
+The Climate Data Explorer seeks to identify and bring together important data from sources including and beyond national statistics to enable decision makers, climate experts, businesses, and citizens to address all aspects of the climate crisis.
+
+---
+
+# Who is this for?
+The platform is open to anyone with an interest in current climate data, or in tackling the climate crisis. 
+
+---
+
+# Packages/Dependencies
+- Dotenv
+- Express
+- Ejs
+- Method-override
+- MongoDB
+- Mongoose
+- Morgan
+- Nodemon
 
 ---
 
 # Devs 
+- Have Node installed
 - Fork this repo
 - Clone it to your local machine
 - Create a .env file with the following variables:
