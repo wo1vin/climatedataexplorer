@@ -14,6 +14,7 @@ This platfom identifies and brings together important data from sources that go 
     - `DB_STRING =` set the value to a MongoDB Connection String with the user and password fields replaced. Make your own or contact me.
     - `PORT = 3000` (value doesn't matter)
 - On the terminal in the folder with the project, run `npm install`
+- After install, type either `npm run start` or `node server` to start the app
 - If no errors were logged, you can open a browser tab and go to `http://localhost:3000/` to view the project.
 - If you plan to publish the code remember to add the .env file to .gitignore
 
