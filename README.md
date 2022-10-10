@@ -1,5 +1,5 @@
 # Climate Data Explorer
-![Climate Data Explorer cover image](https://github.com/wo1vin/socialnetwork/blob/main/public/assets/cover.png?raw=true)
+![Climate Data Explorer cover image](https://github.com/wo1vin/climatedataexplorer/blob/main/public/assets/cover.png?raw=true)
 
 # Introduction
 This project is a work in progress.
