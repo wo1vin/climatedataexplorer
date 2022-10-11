@@ -67,6 +67,16 @@ background: linear-gradient(165deg, rgba(3,22,77,1) 6%, rgba(8,199,214,1) 43%, r
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#03164d",endColorstr="#03164d",GradientType=1);
   font-family: 'Concert One', 'Roboto', sans-serif;
 }
+/*  BUTTONS  */
+.btn{
+  margin: 0 8em;
+  padding: .6em 1.5em;
+  border-radius: 1.5em;
+  background:  linear-gradient(135deg, rgba(3,22,77,1), rgb(0, 134, 158));
+  color: white;
+  font-family: 'Concert One', 'Roboto', sans-serif;
+  font-size: 1rem;
+}
 /*  HOVERS */
 a:hover, section.nav a:hover, li.card:hover{
   margin: -1.2em 0;
@@ -79,8 +89,17 @@ a:hover, section.nav a:hover, li.card:hover{
 li.card:hover{
   width: 50%;
 }
-img:hover{
+a.logo:hover{
   filter: invert(10%) sepia(15%) saturate(1182%) hue-rotate(60deg) brightness(95%) contrast(100%);
+  border: none;
+  padding: 0;
+}
+.btn:hover{
+  margin-top: -.4em;
+  padding: .8em 1.8em;
+  color: #7cf37c;
+  border: 2px solid #7cf37c;
+
 }
 /* HEADER STYLING  */
   nav{
@@ -113,7 +132,7 @@ img:hover{
         position:absolute;
         padding: 8px 0px 8px 13px;
       }
-      input#search, div input {
+      input#search, div input,select {
         padding: 6px 4px 6px 40px;
         border-radius: 2em;
         border: 2px solid white;
@@ -125,7 +144,9 @@ img:hover{
       header ul li+li{
         margin-left: .75em;
       }
-    
+        header ul a{
+          padding: 0 1em;
+        }
 /*  MAIN STYLING - INDEX  */
 main{
   display: flex;
@@ -144,7 +165,7 @@ main{
     }
     h2{
       font-size: 1.3rem;
-      margin: 2em 0;
+      margin: 2em 0 0 0;
     }
     h3{
       font-size: 1rem;
@@ -157,6 +178,7 @@ main{
       margin: 0 0 1em 0;
     }
 ul.row{
+  margin: 2em 0 0 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -206,7 +228,6 @@ section.criteria{
 }
   section.criteria h2,section.criteria ol{
     width: 80%;
-    /* maybe change the list style to something cute? or logo? */
   }
   section.criteria ol{
     margin: 2em 0;
@@ -252,8 +273,12 @@ section.criteria{
       }
       td{
         font-weight: 500;
-        padding: .7em 0 1em 1.2em;
+        padding: .7em 0 1em 1.5em;
         border-bottom: 5px solid rgb(19, 121, 164);
+      }
+      .fa-solid{
+        color: rgb(19, 121, 164);
+        margin: 0 .5em 0 0;
       }
       td.a , th.a{
         border-right: 5px solid rgb(19, 121, 164);
@@ -264,11 +289,13 @@ section.criteria{
 
 /* MAIN - SECTION - FORM */
 section.form form{
+  margin-bottom: 4em;
   display: flex;
   font-size: .8rem;
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
+  background-image: image('/assets/imglogo.png');
 }
   form div{
     display: flex;
@@ -278,27 +305,38 @@ section.form form{
   }
   form div.row{
     width: 100%;
+    margin: .75em 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
   .col2 div {
-    width: 35%;
+    width: 38%;
   }
   .col1 div{
     width: 97%;
   }
   .col4 div{
     width: 25%;
+    margin: 1em 0 ;
   }
-    .col4 div label{
-      margin-left: 0;
+    .col4 .dropdownList{
+      width: 100%;
     }
-  textarea, div.row.col2 div input {
+      .col4 label{
+        margin: 0;
+      }
+      label.dropOption{
+        font-weight: 500;
+      }
+  textarea, div.row.col2 div input ,select{
     width: 100%;
     padding: .5em .25em .5em 1em;
     border-radius: 1em;
     border: 2px solid rgb(3,22,77);
+  }
+  .selectdiv {
+    width: 100%;
   }
   form label{
     margin: 1em 0 .5em 1em;
@@ -314,7 +352,15 @@ section.form form{
   div.wAuto label{
     margin-left: 0;
   }
-
+  div.wAuto section{
+    width: 100%;
+  }
+  .row.col2.botrows{
+    justify-content: center;
+  }
+  .row.col2.botrows div{
+    margin: 0 3em 0 1em;
+  }
 /*  FOOTER  */
 footer {
   padding: 2em 0;
