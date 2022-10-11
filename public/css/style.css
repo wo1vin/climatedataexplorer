@@ -1,15 +1,341 @@
+/* CSS LAYOUT
+CSS RESET
+HOVER STYLING
+HEADER STYLING
 
-form{
+MAIN STYLING
+  INDEX
+  ADD-DATA
+*/
 
-}
-div{
-  position:relative;
-}
-i{
-  position:absolute;
-  padding:10px 10px;
-}
 
-input#search {
-  padding: 9px 4px 9px 40px;
+/*  CSS RESET  */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 62.5%;
+	font: inherit;
+	vertical-align: baseline;
 }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html{
+  background: rgb(3,22,77);
+background: -moz-linear-gradient(165deg, rgba(3,22,77,1) 6%, rgba(8,199,214,1) 43%, rgba(8,191,208,1) 57%, rgba(3,22,77,1) 100%);
+background: -webkit-linear-gradient(165deg, rgba(3,22,77,1) 6%, rgba(8,199,214,1) 43%, rgba(8,191,208,1) 57%, rgba(3,22,77,1) 100%);
+background: linear-gradient(165deg, rgba(3,22,77,1) 6%, rgba(8,199,214,1) 43%, rgba(8,191,208,1) 57%, rgba(3,22,77,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#03164d",endColorstr="#03164d",GradientType=1);
+  font-family: 'Concert One', 'Roboto', sans-serif;
+}
+/*  HOVERS */
+a:hover, section.nav a:hover, li.card:hover{
+  margin: -1.2em 0;
+  padding: 1em;
+  border-radius: 1em;
+  color: #7cf37c;
+  border: 2px solid #7cf37c;
+  z-index: 3;
+}
+li.card:hover{
+  width: 50%;
+}
+img:hover{
+  filter: invert(10%) sepia(15%) saturate(1182%) hue-rotate(60deg) brightness(95%) contrast(100%);
+}
+/* HEADER STYLING  */
+  nav{
+    height: 5em;
+    padding: 0 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+    nav a,section.nav a{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      text-decoration: none;
+    }
+      nav img{
+        height: 2.5em;
+      }
+      nav img+img{
+        margin-left: .75em;
+        height: 1.25em;
+      }
+    form.i-inside{
+      position:relative;
+    }
+      nav i{
+        position:absolute;
+        padding: 8px 0px 8px 13px;
+      }
+      input#search, div input {
+        padding: 6px 4px 6px 40px;
+        border-radius: 2em;
+        border: 2px solid white;
+      }
+    header ul{
+      display: flex;
+      font-size: .9rem;
+    }
+      header ul li+li{
+        margin-left: .75em;
+      }
+    
+/*  MAIN STYLING - INDEX  */
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  font-family: 'Roboto',sans-serif;
+}
+  main section{
+    width: 80%;
+  }
+    h1, h2, h3{
+      font-family: 'Concert One', 'Roboto', sans-serif;
+      font-size: 1.5rem;
+      margin: 2em 0 .5em 0;
+    }
+    h2{
+      font-size: 1.3rem;
+      margin: 2em 0;
+    }
+    h3{
+      font-size: 1rem;
+      letter-spacing: .1rem;
+      /* text-transform: uppercase; */
+      margin: 0;
+    }
+    p{
+      line-height: 1.1rem;
+      margin: 0 0 1em 0;
+    }
+ul.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+  li.card,section.nav{
+    width: 10em;
+    padding: 1em;
+    margin: .3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgb(3,22,77);
+background: -moz-linear-gradient(165deg, rgba(3,22,77,1) 6%, rgba(7,157,181,1) 100%);
+background: -webkit-linear-gradient(165deg, rgba(3,22,77,1) 6%, rgba(7,157,181,1) 100%);
+background: linear-gradient(165deg, rgba(3,22,77,1) 6%, rgba(7,157,181,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#03164d",endColorstr="#079db5",GradientType=1);
+    border: 2px solid black;
+    border-radius: 1em;
+    color: white;
+    text-align: center;
+  }
+    li.card p{
+      font-size: .8rem;
+      margin: .5em 0 0 0;
+    } 
+  section.nav{
+    width: 70%;
+    margin: 4em 0;
+    font-family: 'Concert One', 'Roboto', sans-serif;
+    letter-spacing: .1rem;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+/*  MAIN STYLING - ADD-DATA  */
+section.criteria{
+  width: 100%;
+  padding: 4em 0;
+  margin: 2em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(3,22,77);
+  background: -moz-linear-gradient(165deg, rgba(3,22,77,1) 6%, rgba(13,180,207,1) 100%);
+  background: -webkit-linear-gradient(165deg, rgba(3,22,77,1) 6%, rgba(13,180,207,1) 100%);
+  background: linear-gradient(165deg, rgba(3,22,77,1) 6%, rgba(13,180,207,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#03164d",endColorstr="#0db4cf",GradientType=1);
+}
+  section.criteria h2,section.criteria ol{
+    width: 80%;
+    /* maybe change the list style to something cute? or logo? */
+  }
+  section.criteria ol{
+    margin: 2em 0;
+  }
+    section.criteria h2{
+      color: white;
+      font-size: 1.5rem;
+      margin:  0 0 -1em 0;
+    }
+    li.criteriaCard{
+      margin: .7em 0;
+      padding: 1em;
+      background-color: white;
+      border-radius: 1.5em;
+      border: 1px solid black;
+      font-family: 'Roboto',sans-serif;
+    }
+      li.criteriaCard p, form label{
+        margin: 0;
+        line-height: 1.2rem;
+        font-weight: 600;
+      }
+      li.criteriaCard ol{
+        margin: .5em 0 0 1em;
+        list-style: circle;
+      }
+        li.criteriaCard ol li{
+          margin: .5em 0;
+          font-weight: 500;
+        }
+    table{
+      width: 80%;
+      background-color: white;
+      border-collapse: collapse;
+      border-radius: 1.5em;
+      overflow: hidden;
+    }
+      th{
+        padding: 1em 0;
+        font-family: 'Concert One','Roboto',sans-serif;
+        font-size: 1.1rem;
+        border-bottom: 5px solid rgb(19, 121, 164);
+      }
+      td{
+        font-weight: 500;
+        padding: .7em 0 1em 1.2em;
+        border-bottom: 5px solid rgb(19, 121, 164);
+      }
+      td.a , th.a{
+        border-right: 5px solid rgb(19, 121, 164);
+      }
+      tr:last-child td{
+        border-bottom: none;
+      }
+
+/* MAIN - SECTION - FORM */
+section.form form{
+  display: flex;
+  font-size: .8rem;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+  form div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  form div.row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .col2 div {
+    width: 35%;
+  }
+  .col1 div{
+    width: 97%;
+  }
+  .col4 div{
+    width: 25%;
+  }
+    .col4 div label{
+      margin-left: 0;
+    }
+  textarea, div.row.col2 div input {
+    width: 100%;
+    padding: .5em .25em .5em 1em;
+    border-radius: 1em;
+    border: 2px solid rgb(3,22,77);
+  }
+  form label{
+    margin: 1em 0 .5em 1em;
+    word-wrap: break-word;
+  }
+  form div span {
+    display: none;
+  }
+  div.wAuto{
+    width: auto;
+    align-items: center;
+  }
+  div.wAuto label{
+    margin-left: 0;
+  }
+
+/*  FOOTER  */
+footer {
+  padding: 2em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+  footer p{
+    width: 90%;
+    margin: 0;
+    line-height: 1.5rem;
+    font-size: .8rem;
+    font-family: 'Roboto',sans-serif;
+  }
+    footer p a{
+      margin: 0 .2em;
+      color: white;
+      text-decoration: none;
+      border-bottom: 3px dotted white;
+      font-size: 1rem;
+      font-family: 'Concert One', 'Roboto', sans-serif;
+    }

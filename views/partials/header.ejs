@@ -6,22 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Climate Data Explorer</title>
     <script src="https://kit.fontawesome.com/fa339ab44f.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/style.scss" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <nav>
-            <h1><a href="/">Climate Data Explorer</a></h1>
-            <form>
-                <div class="i-inside">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="search" id="search" name="search" placeholder="Search Data">
-                </div>
+            <a href="/">
+                <img src="/assets/imglogo.png">
+                <img src="/assets/titlelogo.png">
+            </a>
+            <form class="i-inside">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" id="search" name="search" placeholder="Search Data">
             </form>
             <ul>
-                <li><a href="/add-data">Contribute Data</a></li>
-                <li><a href="/feedback">Feedback</a></li>
+                <li><a href="/add-data">Submit Data</a></li>
+                <li><a href="/feedback">Site Feedback</a></li>
             </ul>
         </nav>
     </header>

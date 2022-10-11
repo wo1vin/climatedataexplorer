@@ -1,134 +1,175 @@
 <%- include('partials/header') -%>
 <main>
     <section class="intro">
-        <h2>Submitting Resources</h2>
+        <h1>Submitting Resources</h1>
         <p>
             Help expand the collection by contributing useful datasets and tools. Please double check to make sure the data meets the criteria below so that we can continue to provide the most relevant information to our users. We want to include only tools that have actionable data. Fill out the form below as best you can and we will add it to the database for everyone to use.
         </p>
     </section>
     <section class="criteria">
-        <h3>Criteria</h3>
+        <h2>Criteria</h2>
 
-        <ul class="criteriaList">
-            <li class="criteraCard">
+        <ol class="criteriaList">
+            <li class="criteriaCard">
                 <p>
                     Data must be relevant to climate change.
                 </p>
             </li>
-            <li class="criteraCard">
+            <li class="criteriaCard">
                 <p>
-                    The information should be scientifically sound, meaning the datasets are from reputable organizations, the sources are transparent, or the sources are from an institution with enough sway on climate decisionmaking that it merits inclusion.
+                    The information should be <em>scientifically sound</em>, meaning the datasets are from reputable organizations, the sources are transparent, or the sources are from an institution with enough sway on climate decisionmaking that it merits inclusion.
                 </p>
             </li>
-            <li class="criteraCard">
+            <li class="criteriaCard">
                 <p>
                     Do not submit data or tools that are only focused on one country (like only the US or only India). It must cover one of these:
-                    <ul>
+                    <ol>
                         <li>Be global or multi-country</li>
                         <li>All of the top four emitters (China, USA, EU, and India)</li>
                         <li>Cover a significantly large area, such as more than one region</li>
-                    </ul>
+                    </ol>
                 </p>
             </li>
-            <li class="criteraCard">
+            <li class="criteriaCard">
                 <p>
                     Has the data or portal been updated within the last three years? Acceptable if any one of the following criteria is fulfilled:
-                    <ul>
+                    <ol>
                         <li>Project is still funded</li>
                         <li>Data was updated within the last 3 years</li>
                         <li>Even if not active project is very unique and is still one of the only data sources of its kind (very few will fall under this)</li>
-                    </ul>
+                    </ol>
                 </p>
             </li>
-            <li>
-                <table>
-                    <tr>
-                        <th>Acceptable</th>
-                        <th>Does not meet criteria</th>
-                    </tr>
-                    <tr>
-                        <td>Licensing requirements</td>
-                        <td>Tools behind paywalls</td>
-                    </tr>
-                    <tr>
-                        <td>Anyone can create a login</td>
-                        <td>Data with limited access</td>
-                    </tr>
-                    <tr>
-                        <td>Non English language</td>
-                    </tr>
-                </table>
-            </li>
-        </ul>
+        </ol>
+        <table>
+            <tr>
+                <th class="a">Acceptable</th>
+                <th>Does not meet criteria</th>
+            </tr>
+            <tr>
+                <td class="a b">Licensing requirements</td>
+                <td>Tools behind paywalls</td>
+            </tr>
+            <tr>
+                <td class="a b">Anyone can create a login</td>
+                <td>Data with limited access</td>
+            </tr>
+            <tr>
+                <td class="a b">Non English language</td>
+                <td></td>
+            </tr>
+        </table>
     </section>
     <section class="form">
-        <h3>Submission Sheet</h3>
+        <h2>Submission Sheet</h2>
         <form action="/post/createPost" enctype="multipart/form-data" method="POST">
-            <label class="form-control" for="title">Title</label>
-            <input class="form-control" type="text" name="title" id="title">
-            <label class="form-control" for="link">Link</label>
-            <input class="form-control" type="url" name="link" id="link">
-            <label class="form-control" for="status">Still Active?</label>
-            <input class="form-control" type="radio" name="status" id="status">
-            <label class="form-control" for="description">Brief Description</label>
-            <textarea id="description" name="description" placeholder="Type here..."></textarea>
-            <label for="topic">Topic (can choose multiple)</label>
-            <select name="topic" id="topic" required multiple size="7">
-                <option value="impacts">Impacts</option>
-                <option value="finance">Finance</option>
-                <option value="energy">Energy</option>
-                <option value="mitigation">Mitigation</option>
-                <option value="forest-and-ag">Forest & Agriculture</option>
-                <option value="adaptation">Adaptation</option>
-                <option value="policy">Policy</option>
-            </select>
-            <label for="visType">Visualization Type (can choose multiple)</label>
-            <select name="visType" id="visType" required multiple size="5">
-                <option value="charts">Interactive Charts</option>
-                <option value="maps">Interactive Maps</option>
-                <option value="rawData">Raw Data</option>
-                <option value="report">Report (Static)</option>
-                <option value="aggregator">Resource aggregator</option>
-            </select>
-            <label for="scale">Geographic Scale (ok to pick multiple)</label>
-            <select name="scale" id="scale" required multiple size="7">
-                <option value="global">Global</option>
-                <option value="regional">Regional</option>
-                <option value="country">Country</option>
-                <option value="non-state">Non-state actor</option>
-                <option value="state">State</option>
-                <option value="city">City</option>
-                <option value="geospatial">Geospatial data</option>
-            </select>
-            <label for="audience">Audience (ok to pick multiple)</label>
-            <select name="audience" id="audience" required multiple size="8">
-                <option value="gov">Government ministries</option>
-                <option value="cities">Cities</option>
-                <option value="corporate">Corporate</option>
-                <option value="investors">Investors</option>
-                <option value="Academic">Academic</option>
-                <option value="genpop">General Public</option>
-                <option value="ngo">Advocacy organizations/NGOs</option>
-                <option value="media">Media</option>
-            </select>
-            <%- include('partials/countries') -%>
-            <label for="orgs">Organization(s)</label>
-            <input type="text" name="orgs" id="orgs">
-            <label for="yearEst">Year Established</label>
-            <input type="number" name="yearEst" id="yearEst">
-            <div>
-                <label for="gst">Linked to GST?</label>
-                <i class="fa-regular fa-circle-question"></i>
-                <!--add on hover-->
-                <span>Does the organization self-identify as linked to the COP27 Global Stocktake?</span>
+            <div class="row col2">
+                <div>
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title">
+                </div>
+                <div>
+                    <label for="link">Link</label>
+                    <input type="url" name="link" id="link">
+                </div>
+                <div class="wAuto">
+                    <label for="status">Still Active?</label>
+                    <input  type="checkbox" name="status" id="status">
+                </div>
             </div>
-            <input type="radio" name="gst" id="gst">
-            <label for="addDataUser">Your Name</label>
-            <input type="text" name="addDataUser" id="addDataUser">
-            <label for="addDataEmail">Your Email Address</label>
-            <input type="email" name="addDataEmail" id="addDataEmail">
-            <button type="reset" class="btn">Clear</button>
-            <button type="submit" class="btn">Submit</button>
+            <div class="row col1">
+                <div>
+                    <label for="description">Brief Description</label>
+                    <textarea id="description" name="description" placeholder="Type here..."></textarea>
+                </div>
+            </div>
+            <div class="row col4">
+                <div>
+                    <label for="topic">Topic (multiple ok)</label>
+                    <select name="topic" id="topic" required multiple size="7">
+                        <option value="impacts">Impacts</option>
+                        <option value="finance">Finance</option>
+                        <option value="energy">Energy</option>
+                        <option value="mitigation">Mitigation</option>
+                        <option value="forest-and-ag">Forest & Agriculture</option>
+                        <option value="adaptation">Adaptation</option>
+                        <option value="policy">Policy</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="visType">Visualization Type (multiple ok)</label>
+                    <select name="visType" id="visType" required multiple size="5">
+                        <option value="charts">Interactive Charts</option>
+                        <option value="maps">Interactive Maps</option>
+                        <option value="rawData">Raw Data</option>
+                        <option value="report">Report (Static)</option>
+                        <option value="aggregator">Resource aggregator</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="scale">Geographic Scale (multiple ok)</label>
+                    <select name="scale" id="scale" required multiple size="7">
+                        <option value="global">Global</option>
+                        <option value="regional">Regional</option>
+                        <option value="country">Country</option>
+                        <option value="non-state">Non-state actor</option>
+                        <option value="state">State</option>
+                        <option value="city">City</option>
+                        <option value="geospatial">Geospatial data</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="audience">Audience (multiple ok)</label>
+                    <select name="audience" id="audience" required multiple size="8">
+                        <option value="gov">Government ministries</option>
+                        <option value="cities">Cities</option>
+                        <option value="corporate">Corporate</option>
+                        <option value="investors">Investors</option>
+                        <option value="Academic">Academic</option>
+                        <option value="genpop">General Public</option>
+                        <option value="ngo">Advocacy groups/NGOs</option>
+                        <option value="media">Media</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row col1">
+                <div>
+                <%- include('partials/countries') -%>
+                </div>
+            </div>
+            <div class="row col2">
+                <div>
+                    <label for="orgs">Organization(s)</label>
+                    <input type="text" name="orgs" id="orgs">
+                </div>
+                <div>
+                    <label for="yearEst">Year Established</label>
+                    <input type="number" name="yearEst" id="yearEst">
+                </div>
+                <div>
+                    <div>
+                        <label for="gst">Linked to GST?</label>
+                        <i class="fa-regular fa-circle-question"></i>
+                        <!--add on hover-->
+                        <span>Does the organization self-identify as linked to the COP27 Global Stocktake?</span>
+                    </div>
+                    <input type="checkbox" name="gst" id="gst">
+                </div>
+            </div>
+            <div class="row col2">
+                <div>
+                    <label for="addDataUser">Your Name</label>
+                    <input type="text" name="addDataUser" id="addDataUser">
+                </div>
+                <div>
+                    <label for="addDataEmail">Your Email Address</label>
+                    <input type="email" name="addDataEmail" id="addDataEmail">
+                </div>
+            </div>
+            <div class="row">
+                <button type="reset" class="btn">Clear</button>
+                <button type="submit" class="btn">Submit</button>
+            </div>
         </form>
     </section>
 </main>
