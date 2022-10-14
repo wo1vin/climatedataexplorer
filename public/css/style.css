@@ -69,7 +69,6 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#03164d",endCo
 }
 /*  BUTTONS  */
 .btn{
-  margin: 0 8em;
   padding: .6em 1.5em;
   border-radius: 1.5em;
   background:  linear-gradient(135deg, rgba(3,22,77,1), rgb(0, 134, 158));
@@ -102,9 +101,15 @@ a.logo:hover{
 
 }
 /* HEADER STYLING  */
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
   nav{
+    width: 90%;
     height: 5em;
-    padding: 0 2em;
+    /* padding: 0 2em; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -205,7 +210,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#03164d",endCo
       margin: .5em 0 0 0;
     } 
   section.nav{
-    width: 70%;
+    width: 22em;
     margin: 4em 0;
     font-family: 'Concert One', 'Roboto', sans-serif;
     letter-spacing: .1rem;
@@ -360,6 +365,9 @@ section.form form{
   }
   .row.col2.botrows div{
     margin: 0 3em 0 1em;
+  }
+  .row.col2.btnrow{
+    width: 18em;
   }
 /*  FOOTER  */
 footer {

@@ -62,15 +62,15 @@
     </section>
     <section class="form">
         <h2>Submission Sheet</h2>
-        <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+        <form action="/data/createData" name="postSource" enctype="application/x-www-form-urlencoded" method="POST">
             <div class="row col2">
                 <div>
                     <label for="title">Title</label>
                     <input type="text" name="title" id="title">
                 </div>
                 <div>
-                    <label for="link">Link</label>
-                    <input type="url" name="link" id="link">
+                    <label for="url">Link</label>
+                    <input type="url" name="url" id="url">
                 </div>
                 <div class="wAuto">
                     <label for="status">Still Active?</label>
@@ -88,25 +88,25 @@
                         <label class="dropdownLbl">Topic (multiple ok)</label>
                         <div class="dropdownList">
                             <label class="dropOption">
-                                <input type="checkbox" name="topicVal" value="Impacts">Impacts
+                                <input type="checkbox" name="topic" value="Impacts">Impacts
                             </label>
                             <label class="dropOption">
-                                <input type="checkbox" name="topicVal" value="Finance">Finance
+                                <input type="checkbox" name="topic" value="Finance">Finance
                             </label>
                             <label class="dropOption">
-                                <input type="checkbox" name="topicVal" value="Energy">Energy
+                                <input type="checkbox" name="topic" value="Energy">Energy
                             </label>
                             <label class="dropOption">
-                                <input type="checkbox" name="topicVal" value="Mitigation">Mitigation
+                                <input type="checkbox" name="topic" value="Mitigation">Mitigation
                             </label>
                             <label class="dropOption">
-                                <input type="checkbox" name="topicVal" value="Forest and Agriculture">Forest & Agriculture
+                                <input type="checkbox" name="topic" value="Forest and Agriculture">Forest & Agriculture
                             </label>
                             <label class="dropOption">
-                                <input type="checkbox" name="topicVal" value="adaptation">Adaptation
+                                <input type="checkbox" name="topic" value="adaptation">Adaptation
                             </label>
                             <label class="dropOption">
-                                <input type="checkbox" name="topicVal" value="policy">Policy
+                                <input type="checkbox" name="topic" value="policy">Policy
                             </label>
                         </div>
                     </section>
@@ -114,19 +114,19 @@
                         <label class="dropdownLbl">Visualization Type (multiple ok)</label>
                         <div class="dropdownList">
                             <label class="dropOption">
-                                <input type="checkbox" name="visTypeVal" value="Interactive Charts">Interactive Charts
+                                <input type="checkbox" name="visType" value="Interactive Charts">Interactive Charts
                             </label>
                             <label class="dropOption">
-                                <input type="checkbox" name="visTypeVal" value="Interactive Maps">Interactive Maps
+                                <input type="checkbox" name="visType" value="Interactive Maps">Interactive Maps
                             </label>
                             <label class="dropOption">
-                                <input type="checkbox" name="visTypeVal" value="Raw Data">Raw Data
+                                <input type="checkbox" name="visType" value="Raw Data">Raw Data
                             </label>
                             <label class="dropOption">
-                                <input type="checkbox" name="visTypeVal" value="Report">Report (Static)
+                                <input type="checkbox" name="visType" value="Report">Report (Static)
                             </label>
                             <label class="dropOption">
-                                <input type="checkbox" name="visTypeVal" value="Resource Aggregator">Resource Aggregator
+                                <input type="checkbox" name="visType" value="Resource Aggregator">Resource Aggregator
                             </label>
                         </div>
                     </section>
@@ -134,22 +134,22 @@
                         <label class="dropdownLbl">Geographic Scale (multiple ok)</label>
                         <div class="dropdownList">
                             <label class="dropOption">
-                                <input type="checkbox" name="scaleVal" value="Regional">Regional
+                                <input type="checkbox" name="scale" value="Regional">Regional
                             </label>
                             <label class="dropOption">
-                                <input type="checkbox" name="scaleVal" value="Country">Country
+                                <input type="checkbox" name="scale" value="Country">Country
                             </label>
                             <label class="dropOption">
-                                <input type="checkbox" name="scaleVal" value="Non-State Actor">Non-State Actor
+                                <input type="checkbox" name="scale" value="Non-State Actor">Non-State Actor
                             </label>
                             <label class="dropOption">
-                                <input type="checkbox" name="scaleVal" value="State">State
+                                <input type="checkbox" name="scale" value="State">State
                             </label>
                             <label class="dropOption">
-                                <input type="checkbox" name="scaleVal" value="City">City
+                                <input type="checkbox" name="scale" value="City">City
                             </label>
                             <label class="dropOption">
-                                <input type="checkbox" name="scaleVal" value="Geospatial Data">Geospatial Data
+                                <input type="checkbox" name="scale" value="Geospatial Data">Geospatial Data
                             </label>
                         </div>
                     </section>
@@ -157,28 +157,28 @@
                         <label class="dropdownLbl">Target Audience (multiple ok)</label>
                         <div class="dropdownList">
                             <label class="dropOption">
-                                <input type="checkbox" name="visTypeVal" value="Government Ministries">Government Ministries
+                                <input type="checkbox" name="audience" value="Government Ministries">Government Ministries
                             </label>
                             <label class="dropOption">
-                                <input type="checkbox" name="visTypeVal" value="Cities">Cities
+                                <input type="checkbox" name="audience" value="Cities">Cities
                             </label>
                             <label class="dropOption">
-                                <input type="checkbox" name="visTypeVal" value="Corporate">Corporate
+                                <input type="checkbox" name="audience" value="Corporate">Corporate
                             </label>
                             <label class="dropOption">
-                                <input type="checkbox" name="visTypeVal" value="Investors">Investors
+                                <input type="checkbox" name="audience" value="Investors">Investors
                             </label>
                             <label class="dropOption">
-                                <input type="checkbox" name="visTypeVal" value="Academic">Academic
+                                <input type="checkbox" name="audience" value="Academic">Academic
                             </label>
                             <label class="dropOption">
-                                <input type="checkbox" name="visTypeVal" value="General Public">General Public
+                                <input type="checkbox" name="audience" value="General Public">General Public
                             </label>
                             <label class="dropOption">
-                                <input type="checkbox" name="visTypeVal" value="Advocacy groups/NGOs">Advocacy groups/NGOs
+                                <input type="checkbox" name="audience" value="Advocacy groups/NGOs">Advocacy groups/NGOs
                             </label>
                             <label class="dropOption">
-                                <input type="checkbox" name="visTypeVal" value="Media">Media
+                                <input type="checkbox" name="audience" value="Media">Media
                             </label>
                         </div>
                     </section>
@@ -190,34 +190,25 @@
             </div>
             <div class="row col2 botrows">
                 <div>
-                    <label for="orgs">Organization(s) in charge of data source</label>
+                    <label for="orgs">Organization(s)</label>
                     <input type="text" name="orgs" id="orgs">
                 </div>
                 <div>
                     <label for="yearEst">Year Established</label>
                     <input type="number" name="yearEst" id="yearEst">
                 </div>
-                <!-- <div class="wAuto"> 
-                    <div class="wrap">
-                        <label for="gst">Linked to GST?</label> -->
-                        <!-- <i class="fa-regular fa-circle-question"></i> -->
-                            <!--add on hover-->
-                        <!-- <span>Does the organization self-identify as linked to the COP27 Global Stocktake?</span> -->
-                    <!-- </div>
-                    <input type="checkbox" name="gst" id="gst"> -->
-                <!-- </div> -->
             </div>
             <div class="row col2 botrows">
                 <div>
-                    <label for="addDataUser">Your Name</label>
-                    <input type="text" name="addDataUser" id="addDataUser">
+                    <label for="submitterName">Your Name</label>
+                    <input type="text" name="submitterName" id="submitterName">
                 </div>
                 <div>
-                    <label for="addDataEmail">Your Email Address</label>
-                    <input type="email" name="addDataEmail" id="addDataEmail">
+                    <label for="submitterEmail">Your Email Address</label>
+                    <input type="email" name="submitterEmail" id="submitterEmail">
                 </div>
             </div>
-            <div class="row col2 botrows">
+            <div class="row col2 btnrow">
                 <button type="reset" class="btn">Clear</button>
                 <button type="submit" class="btn">Submit</button>
             </div>
