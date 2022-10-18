@@ -6,7 +6,6 @@ const mongoose = require("mongoose");
 const express = require('express');
 const app = express();
 const methodOverride = require("method-override");
-const logger = require("morgan");
 const mainRoutes = require("./routes/main");
 const dataRoutes = require("./routes/data");
 // const commentRoutes = require("./routes/comments");
@@ -19,8 +18,7 @@ app.use(express.static('public'))
 //Body Parsing
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
-//Logging
-app.use(logger("dev"));
+
 //Use forms for put / delete
 app.use(methodOverride("_method"));
 
