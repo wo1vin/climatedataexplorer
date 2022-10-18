@@ -7,7 +7,6 @@ const dataController = require("../controllers/data");
 // topic clicked?
 // router.get("/:id", dataController.getData); 
 
-//router.get("/data", dataController.getData);
 
 router.post("/createData", dataController.createData);
 

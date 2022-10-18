@@ -69,12 +69,19 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#03164d",endCo
 }
 /*  BUTTONS  */
 .btn{
-  padding: .6em 1.5em;
-  border-radius: 1.5em;
+  padding: .5em .75em;
+  border-radius: 1em;
   background:  linear-gradient(135deg, rgba(3,22,77,1), rgb(0, 134, 158));
   color: white;
-  font-family: 'Concert One', 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.abtn{
+  border: 2px outset black;
+  border-top-color: rgb(128 128 128);
+  border-left-color: rgb(128 128 128);
 }
 /*  HOVERS */
 a:hover, section.nav a:hover, li.card:hover{
@@ -98,7 +105,11 @@ a.logo:hover{
   padding: .8em 1.8em;
   color: #7cf37c;
   border: 2px solid #7cf37c;
+  border-radius: 1.5em;
 
+}
+.tableNav .btn:hover{
+  padding: .5em .75em;
 }
 /* HEADER STYLING  */
 header{
@@ -129,18 +140,6 @@ header{
       nav img+img{
         margin-left: .75em;
         height: 1.25em;
-      }
-    form.i-inside{
-      position:relative;
-    }
-      nav i{
-        position:absolute;
-        padding: 8px 0px 8px 13px;
-      }
-      input#search, div input,select {
-        padding: 6px 4px 6px 40px;
-        border-radius: 2em;
-        border: 2px solid white;
       }
     header ul{
       display: flex;
@@ -209,7 +208,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#03164d",endCo
       font-size: .8rem;
       margin: .5em 0 0 0;
     } 
-  section.nav{
+  section.nav, .tableNav{
     width: 22em;
     margin: 4em 0;
     font-family: 'Concert One', 'Roboto', sans-serif;
@@ -369,6 +368,70 @@ section.form form{
   .row.col2.btnrow{
     width: 18em;
   }
+/*  MAIN STYLING - DATA  */
+.filterMenu{
+  padding: 1em;
+  width: fit-content;
+  display: none; /* display: flex on filter click */
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: .75em;
+  position:relative;
+
+}
+.filterMenu i.fa-magnifying-glass{
+    position:absolute;
+    padding: 8px 0px 8px 13px;
+  }
+  input#search, div input,select {
+    padding: 6px 4px 6px 40px;
+    border-radius: 2em;
+    border: 2px solid white;
+  }
+.btn i{
+  color: white;
+}
+
+.menuOptions{
+  display: none;
+}
+/* DATA CARD */
+.dataCard{
+  padding: .75em;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+}
+h5{
+  margin: .25em 0;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.dataRow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.dataRow span {
+  margin-right: .2em;
+  padding: .2em .5em;
+  border-radius: .5em;
+  color: white;
+}
+.spBt, .dataRow.expand{
+  justify-content: space-between;
+}
+span.dataTopic {
+  background-color: rgb(19, 121, 164);
+}
+span.visType {
+  background-color: rgb(0, 198, 122);
+}
+.dataRow.expand span{
+  color: black;
+}
+
 /*  FOOTER  */
 footer {
   padding: 2em 0;
